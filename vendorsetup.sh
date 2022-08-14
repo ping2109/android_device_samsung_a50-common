@@ -1,6 +1,10 @@
 echo "I: - Fixing Stuff on A50 Device Trees"
 ### Start ###
 
+# Magisk update
+bash ../../kernel/samsung/a50/usr/magisk/update_magisk.sh
+bash ../../kernel/samsung/a50-common/usr/magisk/update_magisk.sh
+
 # Keystore patch
 echo "Applying Keystore patch...";
 cd system/security;
