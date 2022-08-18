@@ -15,18 +15,18 @@ cp device/samsung/a50-common/patch/android.hardware.health@2.1-service.rc hardwa
 echo "I: - Patching keystore"
 cd system/security
 git apply ../../device/samsung/a50-common/patch/Keystore.patch
-cd ../..
+cd -
 
 # Light patch
 echo "I: - Patching light hals"
 cd frameworks/base
 wget https://raw.githubusercontent.com/sarthakroy2002/random-stuff/main/Patches/Fix-brightness-slider-curve-for-some-devices-a12l.patch 
 patch -p1 < *.patch
-cd ../..
+cd -
 
 
 # BT calls fix
 echo "I: - Fixing BT hals"
 cd system/bt
 git apply ../../device/samsung/a50-common/patch/BTCalls-On-Samsung.patch
-cd ../..
+cd -
